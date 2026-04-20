@@ -3,6 +3,7 @@ plugins {
     scala
     application
 }
+
 repositories {
     mavenCentral()
 }
@@ -15,3 +16,6 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic:1.5.32")
 }
 
+application {
+    mainClass.set("Main")
+}
