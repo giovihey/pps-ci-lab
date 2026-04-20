@@ -1,0 +1,17 @@
+name: ci.yml
+on:
+  push:
+  pull_request:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          java-version: 25
+          distribution: ''
+      - name: Build
+        run: ./gradlew clean build
